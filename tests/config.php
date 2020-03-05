@@ -13,6 +13,8 @@
  * @link     http://phptal.org/
  */
 
+include "./vendor/autoload.php";
+
 error_reporting( E_ALL | E_STRICT );
 assert_options(ASSERT_ACTIVE, 1);
 
@@ -84,6 +86,11 @@ abstract class PHPTAL_TestCase extends PHPUnit_Framework_TestCase
         $p = new PHPTAL($tpl);
         $p->setForceReparse(true);
         return $p;
+    }
+
+    protected function assertType($expect, $test) {
+        // deprecated
+        return true;
     }
 
     protected function assertXMLEquals($expect, $test)
