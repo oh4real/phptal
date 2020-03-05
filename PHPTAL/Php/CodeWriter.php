@@ -35,6 +35,7 @@ class PHPTAL_Php_CodeWriter
      */
     private $known_functions = array();
 
+    private $_indentation = 0;
 
     public function __construct(PHPTAL_Php_State $state)
     {
